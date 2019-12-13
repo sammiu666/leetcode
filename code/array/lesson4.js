@@ -1,3 +1,5 @@
+// Leetcode 89
+
 export default (n) => {
   // 递归函数，用来计算输入为n的格雷编码序列
   let make = (n) => {

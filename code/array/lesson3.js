@@ -1,3 +1,5 @@
+// Leetcode 605
+
 export default (arr, n) => {
   let count = 0
   // 右边界补充一个0，以防判断错误。
