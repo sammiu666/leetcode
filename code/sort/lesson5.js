@@ -28,7 +28,7 @@ export default (arr) => {
     arr[i] = arr[j]
     arr[j] = tmp
   }
-
+  // 找到基准值
   let findCenter = (arr, left, right) => {
     let flag = arr[left]
     let idx = left + 1
@@ -41,11 +41,13 @@ export default (arr) => {
     swap(arr, left, idx - 1)
     return idx
   }
-
+  // 递归排序
   let sort = (arr, left, right) => {
     if (left < right) {
       let center = findCenter(arr, left, right)
+      // 对基准值左边进行递归排序
       sort(arr, left, center - 1)
+      // 对基准值右边进行递归排序
       sort(arr, center, right)
     }
   }
