@@ -1,5 +1,5 @@
 // Leetcode 922
-
+// 奇偶排序
 export default (arr) => {
   let r = []
   let odd = 1

@@ -1,4 +1,5 @@
 // 选择排序
+// 每轮找出一个最小值放至数组左边
 export default (arr) => {
   for (let i = 0, len = arr.length, min; i < len - 1; i++) {
     min = arr[i]

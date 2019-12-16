@@ -15,6 +15,7 @@ export default (str) => {
     }
   })
   // 保存键盘映射后的字母内容，如 23=>['abc','def']
+  // comb对两个映射进行融合
   let comb = (arr) => {
     let tmp = []
     for (let i = 0, il = arr[0].length; i < il; i++) {
@@ -22,12 +23,15 @@ export default (str) => {
         tmp.push(`${arr[0][i]}${arr[1][j]}`)
       }
     }
+    // 用tmp替换前两项
     arr.splice(0, 2, tmp)
     if (arr.length > 1) {
       comb(arr)
     } else {
+      // 递归出口
       return tmp
     }
+    // 返回最终融合后的组合
     return arr[0]
   }
   // 调用

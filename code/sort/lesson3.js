@@ -15,6 +15,7 @@
 // }
 
 // Leetcode 164
+// 最大区间
 export default (arr) => {
   if (arr.length < 2) {
     return 0
