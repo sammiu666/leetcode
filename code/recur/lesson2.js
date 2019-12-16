@@ -20,5 +20,6 @@ export default (str, words) => {
   range([], words)
   return result.map(item => {
     return str.indexOf(item.join(''))
+    // 去除找不到子串的情况
   }).filter(item => item !== -1).sort()
 }
